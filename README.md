@@ -1,7 +1,7 @@
 ![pngtree-awning-store-storefront-striped-stripe-png-image_4904557](https://github.com/user-attachments/assets/60d7e6fb-c17c-4024-bc2f-245a49458228)
 
 
-# The Ice Cream Shop
+# ˜”*°•.Ice Cream Shop.•°*”˜
 final-project-ymca created by GitHub Classroom
 
 ### Who are our customers?
