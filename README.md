@@ -1,4 +1,4 @@
-# final-project-ymca
+# final-project-ymca: The Ice Cream Shop
 final-project-ymca created by GitHub Classroom
 
 ### Who are our customers?
