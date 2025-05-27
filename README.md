@@ -3,9 +3,6 @@
 
 # The Ice Cream Shop
 final-project-ymca created by GitHub Classroom
-App {
-     --font-family: 'Sans Serif';
-   }
 
 ### Who are our customers?
 ```
