@@ -2,7 +2,7 @@
 
 
 # ˜”*°•Ice Cream Shop•°*”˜
-We have 2 codes: the main is ICECREAM and the Aryan_ice_cream_code is an additional one!
+We have 2 codes: the main is ICECREAM and the Aryan_ice_cream_code is an additional one cause we had time!
 
 ### Who are our customers?
 ```
