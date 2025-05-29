@@ -1,17 +1,19 @@
 menu = ['1','2','3']
-cost = 0
-amtChoco = 0
-amtVan = 0
-amtStraw = 0
+
     
-def order(cost, amtChoco, amtVan, amtStraw):
+def order():
     true = True
+    cost = 0
+    amtChoco = 0
+    amtVan = 0
+    amtStraw = 0
+    amtSpr = 0
     while true == True:
         WhatYouWant = input("What flavor ice cream would you like? Chocolate (1), Vanilla (2), Strawberry (3)")
         
         if str(WhatYouWant) == menu[0]:
             Choco = input("How many chocolate ice creams would you like?")
-            if Choco.isdigit():
+            if Choco.isdigit() and int(Choco) > 0:
                 cost += int(Choco)*1.75
                 amtChoco += int(Choco)
                 more = input("would you like to order more? (yes/no)")
@@ -25,9 +27,19 @@ def order(cost, amtChoco, amtVan, amtStraw):
                     amtChoco = 0
                     amtVan = 0
                     amtStraw = 0
+                    amtSpr = 0
+                    continue
+            else:
+                    print("please select how many you want. Resetting your order.")
+                    cost = 0
+                    amtChoco = 0
+                    amtVan = 0
+                    amtStraw = 0
+                    amtSpr = 0
+                    continue
         elif str(WhatYouWant) == menu[1]:
-            Van = input("How many chocolate ice creams would you like?")
-            if Van.isdigit():
+            Van = input("How many vanilla ice creams would you like?")
+            if Van.isdigit() and Van > 0:
                 cost += int(Van)*1.25
                 amtVan += int(Van)
                 more = input("would you like to order more? (yes/no)")
@@ -36,14 +48,24 @@ def order(cost, amtChoco, amtVan, amtStraw):
                 elif more == "no":
                     break
                 else:
+                    print("please select how many you want. Resetting your order.")
+                    cost = 0
+                    amtChoco = 0
+                    amtVan = 0
+                    amtStraw = 0
+                    amtSpr = 0
+                    continue
+            else:
                     print("please select if you want more. Resetting your order.")
                     cost = 0
                     amtChoco = 0
                     amtVan = 0
                     amtStraw = 0
+                    amtSpr = 0
+                    continue
         elif str(WhatYouWant) == menu[2]:
-            Straw = input("How many chocolate ice creams would you like?")
-            if Straw.isdigit():
+            Straw = input("How many strawberry ice creams would you like?")
+            if Straw.isdigit() and Straw > 0:
                 cost += int(Straw)*2.0
                 amtStraw += int(Straw)
                 more = input("would you like to order more? (yes/no)")
@@ -57,16 +79,28 @@ def order(cost, amtChoco, amtVan, amtStraw):
                     amtChoco = 0
                     amtVan = 0
                     amtStraw = 0
+                    amtSpr = 0
+                    continue
+            else:
+                    print("please select how many you want. Resetting your order.")
+                    cost = 0
+                    amtChoco = 0
+                    amtVan = 0
+                    amtStraw = 0
+                    amtSpr = 0
+                    continue
         else:
             print("Please select what you want. Restarting order.")
             cost = 0
             amtChoco = 0
             amtVan = 0
             amtStraw = 0
-            cost(0,0,0,0)
-        tops = input("would you like rainbow sprinkles for 3$? yes/no")
+            amtSpr = 0
+            continue
+        tops = input("would you like a cup of rainbow sprinkles for 3$? yes/no")
         if tops == "yes":
             cost += 3
+            amtSpr += 1
             x = input("would you like to order more? yes/no")
             if x == "no":
                 break
@@ -76,6 +110,8 @@ def order(cost, amtChoco, amtVan, amtStraw):
                 amtChoco = 0
                 amtVan = 0
                 amtStraw = 0
+                amtSpr = 0
+                continue
         elif tops != "no":
             cost = 0
             print("Please select if you want sprinkles. Restarting order")
@@ -83,10 +119,11 @@ def order(cost, amtChoco, amtVan, amtStraw):
             amtChoco = 0
             amtVan = 0
             amtStraw = 0
+            amtSpr = 0
             continue
     
         
-    
+    print("You have ordered:" + " " + amtChoco + " chocolate icecreams" + "\n" + amtVan + " Vanilla icecreams" + "\n" + amtStraw + " Strawberry icecreams" + "\n" + amtSpr + " cups of sprinkles")
     print("Your total cost is: " + str(round(cost, 2)) + "$")
 
-order(0, 0 ,0 ,0)
+order()
