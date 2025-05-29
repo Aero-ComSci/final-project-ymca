@@ -141,3 +141,36 @@ def order():
             amtSpr = 0
             continue
   ```
+
+### Loop
+```
+while true == True:
+        WhatYouWant = input("What flavor ice cream would you like? Chocolate (1), Vanilla (2), Strawberry (3)")
+        
+        if str(WhatYouWant) == menu[0]:
+            Choco = input("How many chocolate ice creams would you like?")
+            if Choco.isdigit() and int(Choco) > 0:
+                cost += int(Choco)*1.75
+                amtChoco += int(Choco)
+                more = input("would you like to order more? (yes/no)")
+                if more == "yes":
+                    print("please select your next item")
+                elif more == "no":
+                    break
+                else:
+                    print("please select if you want more. Resetting your order.")
+                    cost = 0
+                    amtChoco = 0
+                    amtVan = 0
+                    amtStraw = 0
+                    amtSpr = 0
+                    continue
+            else:
+                    print("please select how many you want. Resetting your order.")
+                    cost = 0
+                    amtChoco = 0
+                    amtVan = 0
+                    amtStraw = 0
+                    amtSpr = 0
+                    continue
+```
