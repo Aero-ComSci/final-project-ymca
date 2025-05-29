@@ -174,3 +174,8 @@ while true == True:
                     amtSpr = 0
                     continue
 ```
+
+### List
+```
+menu = ['1','2','3']
+```
