@@ -39,7 +39,7 @@ def order():
                     continue
         elif str(WhatYouWant) == menu[1]:
             Van = input("How many vanilla ice creams would you like?")
-            if Van.isdigit() and Van > 0:
+            if Van.isdigit() and int(Van) > 0:
                 cost += int(Van)*1.25
                 amtVan += int(Van)
                 more = input("would you like to order more? (yes/no)")
@@ -65,7 +65,7 @@ def order():
                     continue
         elif str(WhatYouWant) == menu[2]:
             Straw = input("How many strawberry ice creams would you like?")
-            if Straw.isdigit() and Straw > 0:
+            if Straw.isdigit() and int(Straw) > 0:
                 cost += int(Straw)*2.0
                 amtStraw += int(Straw)
                 more = input("would you like to order more? (yes/no)")
@@ -123,7 +123,7 @@ def order():
             continue
     
         
-    print("You have ordered:" + " " + amtChoco + " chocolate icecreams" + "\n" + amtVan + " Vanilla icecreams" + "\n" + amtStraw + " Strawberry icecreams" + "\n" + amtSpr + " cups of sprinkles")
+    print("You have ordered:" + " " + str(amtChoco) + " chocolate icecreams" + "\n" + str(amtVan) + " Vanilla icecreams" + "\n" + str(amtStraw) + " Strawberry icecreams" + "\n" + str(amtSpr) + " cups of sprinkles")
     print("Your total cost is: " + str(round(cost, 2)) + "$")
 
 order()
